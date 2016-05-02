@@ -1,0 +1,269 @@
+<div id="background2">
+    <div class="container" id="content">
+        <!--header -->
+        <div class="row">
+            <div class="col-md-3 col-sm-3">
+                <a href="#/"><img src="images/logo.png" class="img-responsive img-rounded " width="50%" id="logo"></a>
+            </div>
+            <div class="col-md-9 col-sm-12 ">
+                <ul class="list-inline pull-right m2 ">
+                    <li>
+                        <a href="#/" class=" btn-twitter ">
+                            <span class="fa fa-twitter fa-2x white"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/" class=" btn-twitter">
+                            <span class="fa fa-facebook fa-2x white"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/" class=" btn-twitter">
+                            <span class="fa fa-instagram fa-2x white"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/" class=" btn-twitter">
+                            <span class="fa fa-pinterest fa-2x white"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/" class=" btn-twitter">
+                            <span class="fa fa-youtube fa-2x white"></span>
+                        </a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+        <!--Cart -->
+        <div class="row m2">
+            <div class="col-md-3 col-sm-12">
+                <div class="row " id="login">
+                    <a href="#/"><div class="col-md-6 col-sm-6">
+                        <h4>Log In</h4></div></a>
+                    <a href="#/"><div class="col-md-6 col-sm-6">
+                        <h4>Wish List</h4></div></a>
+                </div>
+                <div class="row" id="items">
+                    <div class="col-md-3 col-sm-4
+glyphicon glyphicon-shopping-cart" id="glyphedit2"></div>
+                    <div class="col-md-6 col-sm-4">
+                        <h4>0$</h4></div>
+                    <div class="col-md-3 col-sm-4 glyphicon glyphicon-remove" id="glyphedit">
+                        <h5>edit</h5></div>
+                </div>
+                <div class="row" id="checkout">
+                    <a href="#/"><div class="col-md-6 col-sm-6">
+                        <h4>View Cart</h4></div></a>
+                    <a href="#/"><div class="col-md-6 col-sm-4">
+                        <h4>Checkout</h4></div></a>
+                </div>
+                <div class="row" id="search">
+                    <div class="col-md-11 col-sm-10 noPadding">
+                        <input type="text" class="form-control" placeholder="search">
+                    </div>
+                    <div class="col-md-1 col-sm-2 noPadding">
+                        <button type="button" class="btn btn-default btn-md  glyphicon glyphicon-search " id="searchicon"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Banner -->
+      
+        <div class="row">
+            <div class="col-md-3 noPadding">
+            <div id="menu">
+                    <h4>Menu</h4></div>
+                <section  class="categories">
+                    <ul class="nav">
+                        <li >
+                            <a href ="#/">Home</a> </li>
+                        <li > <a href ="#/contacts">Contacts</a> </li>
+                     
+                    </ul>
+                </section>
+
+                <div id="menu">
+                    <h4>Category</h4></div>
+                <section ng-init="tab = 1" class="categories">
+                    <ul class="nav">
+                        <li ng-class="{active:tab === 1}">
+                            <a href ng-click="tab = 1"> Windsurfing</a> </li>
+                        <li ng-class="{active:tab === 2}"> <a href ng-click="tab = 2">Kitesurf</a> </li>
+                        <li ng-class="{active:tab === 3}"> <a href ng-click="tab = 3">Accesories</a> </li>
+                    </ul>
+                </section>
+                <div id="banner2">
+                    <h1>NOW IS OPEN!</h1>
+                </div>
+                <div ng-controller="ProductsController">
+                    <h3>Tags</h3>
+                    <div class="tags col-md-4" ng-repeat="product in products">
+                        <a href="#index">
+                            <h4>{{product.tags}}</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-12" id="banner4">
+                    <h2>Article Experts</h2>
+                    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsas inanes quot tractatas euripidis, persequeretur vide consentinis quarum nivem sunt ferre mundi, minorem persecuti sermo cohaerescant vix universas conducunt acutus virtute. </br> Iudicante disputatum perdiscere maximam. Dolemus aut, oportere videtis inopem.</h4>
+                    <a href="#more"> View all -></a>
+                </div>
+            </div>
+            <div class="col-md-8 " id="productpl">
+                <div class="col-md-5">
+                    <div class="thumbnail m2"> <img ng-src="{{item.images[0]}}"></div>
+                    <div class="col-md-4 thumbnail " ng-repeat="images in item.images"><img ng-src="{{images}}">
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <h2>{{item.name}}</h2>
+                    <div class="price">
+                        <h3>$ {{item.price}}</h3>
+                        <div class="text">
+                            <ul>
+                                <ol>
+                                    <p>Product Id: {{item.id}}</p>
+                                </ol>
+                                <ol class="green">
+                                    <p ng-show="item.availability" >Available in Shop</p>
+                                </ol>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="quickov">
+                        <h4>Quick Overview</h4> {{item.quick}}
+                    </div>
+                    <div class="size">
+                        <h3>Size</h3>
+                        <ul class="list-inline">
+                            <li ng-repeat="size in item.size ">
+                                <button>
+                                    {{size}}</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="length">
+                        <h3>Length</h3>
+                        <ul class="list-inline">
+                            <li ng-repeat="length in item.length ">
+                                <button>
+                                    {{length}}</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">Quantity</div>
+                    <div class="col-md-3">
+                        <button type="button" class="btn btn-warning">Add to Cart</button>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="addto">
+                            <li><p>Add to Wishlist</p></li>
+                            <li><p>Add to Compare</p></li>
+                            <li><p>Email to a Friend</p></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <section ng-init="tab = 1" class="categories2">
+                        <ul class="nav nav-pills">
+                            <li ng-class="{active:tab === 1}">
+                                <a href ng-click="tab = 1"> Product Description</a> </li>
+                            <li ng-class="{active:tab === 2}"> <a href ng-click="tab = 2">Additional Information</a> </li>
+                            <li ng-class="{active:tab === 3}"> <a href ng-click="tab = 3">Reviews</a> </li>
+                            <li ng-class="{active:tab === 4}"> <a href ng-click="tab = 4">Product Tags</a> </li>
+                        </ul>
+                    </section>
+                    <div class="panel" ng-show="tab === 1">
+                        <p>{{item.description}}</p>
+                    </div>
+                    <div class="panel" ng-show="tab === 2">
+                        <p>{{item.additional}}</p>
+                    </div>
+                    <div class="panel" ng-show="tab === 3">
+                        <ul>
+                            <li ng-repeat="reviews in item.reviews">
+                                <h4>{{reviews}}</h4>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="panel" ng-show="tab === 4">
+                        <ul>
+                            <li ng-repeat="tags in item.tags">
+                                <h3>{{tags}}</h3>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--Banner2 -->
+        </div>
+    </div>
+    <!--Products -->
+    <div class="row ">
+    </div>
+    <!--Slider -->
+    <div class="container">
+        
+      <div class="row">
+            <div class="col-md-4 facebook socBig">
+                <a href="#/" class=" btn-twitter ">
+                    <span class="fa fa-facebook fa-4x socAlign"></span>
+                </a>
+            </div>
+            <div class="col-md-4 twitter socBig">
+                <a href="#/" class=" btn-twitter ">
+                    <span class="fa fa-twitter fa-4x socAlign"></span>
+                </a>
+            </div>
+            <div class="col-md-4 pinterest socBig">
+                <a href="#/" class=" btn-twitter ">
+                    <span class="fa fa-pinterest fa-4x socAlign"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+   <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="aboutfo">
+                        <div class="col-md-4 categoryfo"><h4>Category</h4>
+                        <ul>
+                          <li><a href="#/">link</a></li>
+                          <li><a href="#/">link</a></li>
+                          <li><a href="#/">link</a></li>
+                          <li><a href="#/">link</a></li>
+                          <li><a href="#/">link</a></li>
+                          <li><a href="#/">link</a></li>
+                          
+                        </ul>
+                        </div>
+                         <div class="col-md-4 categoryfo"><h4>Our Account</h4>
+                        <ul>
+                          <li><a href="#/">link</a></li>
+                          <li><a href="#/">link</a></li>
+                          <li><a href="#/">link</a></li>
+                          <li><a href="#/">link</a></li>
+                          <li><a href="#/">link</a></li>
+                          <li><a href="#/">link</a></li>
+                        </ul>
+                        </div>
+                         <div class="col-md-4 categoryfo"><h4>Our Support</h4>
+                        <ul>
+                          <li><a href="#/">link</a></li>
+                          <li><a href="#/">link</a></li>
+                          <li><a href="#/">link</a></li>
+                          <li><a href="#/">link</a></li>
+                          
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3"><h4>Newsletter</h4></div>
+                <div class="col-md-3"><h4>About Us</h4>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Succumbere eorumque scribimus quidque. Angore sumitur inquam manu provincias magnopere eriguntur soliditatem respirare, imperiis declinabunt falsis amatoriis philosophiae, quodsi morte intellegimus debilitatem voluptatis fames gravis responsum soleat plura..</div>
+            </div>
+        </div>
+    </div>

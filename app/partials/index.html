@@ -1,0 +1,262 @@
+<div id="background">
+    <div class="container" id="content">
+        <!--header -->
+        <div class="row">
+            <div class="col-md-3 col-sm-3">
+                <a href="#/"><img src="images/logo.png" class="img-responsive img-rounded " width="50%" id="logo"></a>
+            </div>
+            <div class="col-md-9 col-sm-12 ">
+                <ul class="list-inline pull-right m2">
+                    <li>
+                        <a href="#/" class=" btn-twitter ">
+                            <span class="fa fa-twitter fa-2x white"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/" class=" btn-twitter">
+                            <span class="fa fa-facebook fa-2x white"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/" class=" btn-twitter">
+                            <span class="fa fa-instagram fa-2x white"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/" class=" btn-twitter">
+                            <span class="fa fa-pinterest fa-2x white"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/" class=" btn-twitter">
+                            <span class="fa fa-youtube fa-2x white"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--Cart -->
+        <div class="row m2">
+            <div class="col-md-3 col-sm-12">
+                <div class="row " id="login">
+                    <a href="#/"><div class="col-md-6 col-sm-6">
+                        <h4>Log In</h4></div></a>
+                    <a href="#/"><div class="col-md-6 col-sm-6">
+                        <h4>Wish List</h4></div></a>
+                </div>
+                <div class="row" id="items">
+                    <div class="col-md-3 col-sm-4
+glyphicon glyphicon-shopping-cart" id="glyphedit2"></div>
+                    <div class="col-md-6 col-sm-4">
+                        <h4>0$</h4></div>
+                    <div class="col-md-3 col-sm-4 glyphicon glyphicon-remove" id="glyphedit">
+                        <h5>edit</h5></div>
+                </div>
+                <div class="row" id="checkout">
+                    <a href="#/"><div class="col-md-6 col-sm-6">
+                        <h4>View Cart</h4></div></a>
+                    <a href="#/"><div class="col-md-6 col-sm-4">
+                        <h4>Checkout</h4></div></a>
+                </div>
+                <div class="row" id="search">
+                    <div class="col-md-11 col-sm-10 noPadding">
+                        <input type="text" class="form-control" placeholder="search">
+                    </div>
+                    <div class="col-md-1 col-sm-2 noPadding">
+                        <button type="button" class="btn btn-default btn-md  glyphicon glyphicon-search " id="searchicon"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+            <div class="col-md-5 slidertxt">
+                <h1>JP FUNRIDE 2014</h1>
+                <h3>Super easy going freedide boards based on the X-Cite Ride shape concept with additional control and super easy jibing.</h3>
+                <button type="button" class="btn btn-default">
+                    <h4>BUY NOW</h4></button>
+            </div>
+        </div>
+        <!--Banner -->
+    
+        <div class="row">
+            <div class="col-md-3 noPadding">
+                <div id="banner">
+                <h2>WELCOME TO SURFHOUSE</h2>
+                <h4>The only online store you will ever need for all your windsurfing and kitesurfing and SUP needs</h4>
+            </div>
+                <div id="menu">
+                    <h4>Menu</h4></div>
+                <section  class="categories">
+                    <ul class="nav">
+                        <li >
+                            <a href ="#/">Home</a> </li>
+                        <li > <a href ="#/contacts">Contacts</a> </li>
+                     
+                    </ul>
+                </section>
+
+                <div id="menu">
+                    <h4>Category</h4></div>
+                <section ng-init="tab = 1" class="categories">
+                    <ul class="nav">
+                        <li ng-class="{active:tab === 1}">
+                            <a href ng-click="tab = 1"> Windsurfing</a> </li>
+                        <li ng-class="{active:tab === 2}"> <a href ng-click="tab = 2">Kitesurf</a> </li>
+                        <li ng-class="{active:tab === 3}"> <a href ng-click="tab = 3">Accesories</a> </li>
+                    </ul>
+                </section>
+                <div id="banner2">
+                    <h1>NOW IS OPEN!</h1>
+                </div>
+                <div ng-controller="ProductsController">
+                    <h3>Tags</h3>
+                    <div class="tags col-md-4" ng-repeat="product in products">
+                        <a href="#/">
+                            <h4>{{product.tags}}</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-12" id="banner4">
+                    <h2>Article Experts</h2>
+                    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsas inanes quot tractatas euripidis, persequeretur vide consentinis quarum nivem sunt ferre mundi, minorem persecuti sermo cohaerescant vix universas conducunt acutus virtute. </br> Iudicante disputatum perdiscere maximam. Dolemus aut, oportere videtis inopem.</h4>
+                    <a href="#/"> View all -></a>
+                </div>
+            </div>
+            <div class="col-md-8 " id="productpl">
+                <div class="navNew" id="productpl">
+                    <h3>NEW PRODUCTS</h3>
+                </div>
+                <div class="row" ng-controller="ProductsController">
+                    <div class="col-sm-6 col-md-4 thumbnail marg" ng-repeat="product in products| filter:query | limitTo:3 " ng-show="product.new">
+                        <a href="#/{{product.id}}"><img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
+                            <div class="caption">
+                                <h4 class="noPadding">{{product.name}}</h4>
+                                <h4 class="pull-right noPadding">${{product.price}}</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 " id="productpl">
+                <div class="navNew" id="productpl">
+                    <h3>TOP PRODUCTS</h3>
+                </div>
+                <div class="row" ng-controller="ProductsController">
+                    <div class="col-sm-6 col-md-4 thumbnail marg" ng-repeat="product in products| filter:query | limitTo:3 " ng-show="product.new">
+                        <a href="#/{{product.id}}"><img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
+                            <div class="caption">
+                                <h4 class="noPadding">{{product.name}}</h4>
+                                <h4 class="pull-right noPadding">${{product.price}}</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 " id="productpl">
+                <div class="navNew" id="productpl">
+                    <h3>SALE PRODUCTS</h3>
+                </div>
+                <div class="row" ng-controller="ProductsController">
+                    <div class="col-sm-6 col-md-4 thumbnail marg" ng-repeat="product in products| filter:query | limitTo:3 " ng-show="product.new">
+                        <a href="#/{{product.id}}"><img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
+                            <div class="caption">
+                                <h4 class="noPadding">{{product.name}}</h4>
+                                <h4 class="pull-right noPadding">${{product.price}}</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container m2">
+    
+</div>
+<div class="container">
+
+    <div class="row sponsors">
+        <div class="col-md-2 cntr">
+            <h3>Brand</h3></div>
+        <div class="col-md-2 cntr">
+            <h3>Brand</h3></div>
+        <div class="col-md-2 cntr">
+            <h3>Brand</h3></div>
+        <div class="col-md-2 cntr">
+            <h3>Brand</h3></div>
+        <div class="col-md-2 cntr">
+            <h3>Brand</h3></div>
+        <div class="col-md-2 cntr">
+            <h3>Brand</h3></div>
+    </div>
+
+    <div class="row instagram">
+        <h3><span class="fa fa-instagram fa-1x"></span>Instagram feed #SurfHouse</h3></div>
+    <div class="col-md-2 box"></div>
+    <div class="col-md-2 box"></div>
+    <div class="col-md-2 box"></div>
+    <div class="col-md-2 box"></div>
+    <div class="col-md-2 box"></div>
+    <div class="col-md-2 box"></div>
+    <div class="row">
+        <div class="col-md-4 facebook socBig">
+            <a href="#/" class=" btn-twitter ">
+                <span class="fa fa-facebook fa-4x socAlign"></span>
+            </a>
+        </div>
+        <div class="col-md-4 twitter socBig">
+            <a href="#/" class=" btn-twitter ">
+                <span class="fa fa-twitter fa-4x socAlign"></span>
+            </a>
+        </div>
+        <div class="col-md-4 pinterest socBig">
+            <a href="#/" class=" btn-twitter ">
+                <span class="fa fa-pinterest fa-4x socAlign"></span>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="aboutfo">
+                    <div class="col-md-4 categoryfo">
+                        <h4>Category</h4>
+                        <ul>
+                            <li><a href="#/">link</a></li>
+                            <li><a href="#/">link</a></li>
+                            <li><a href="#/">link</a></li>
+                            <li><a href="#/">link</a></li>
+                            <li><a href="#/">link</a></li>
+                            <li><a href="#/">link</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 categoryfo">
+                        <h4>Our Account</h4>
+                        <ul>
+                            <li><a href="#/">link</a></li>
+                            <li><a href="#/">link</a></li>
+                            <li><a href="#/">link</a></li>
+                            <li><a href="#/">link</a></li>
+                            <li><a href="#/">link</a></li>
+                            <li><a href="#/">link</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 categoryfo">
+                        <h4>Our Support</h4>
+                        <ul>
+                            <li><a href="#/">link</a></li>
+                            <li><a href="#/">link</a></li>
+                            <li><a href="#/">link</a></li>
+                            <li><a href="#/">link</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h4>Newsletter</h4></div>
+            <div class="col-md-3">
+                <h4>About Us</h4> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Succumbere eorumque scribimus quidque. Angore sumitur inquam manu provincias magnopere eriguntur soliditatem respirare, imperiis declinabunt falsis amatoriis philosophiae, quodsi morte intellegimus debilitatem voluptatis fames gravis responsum soleat plura..</div>
+        </div>
+    </div>
+</div>

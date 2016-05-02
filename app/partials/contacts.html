@@ -1,0 +1,235 @@
+<div id="background3">
+    <div class="container" id="content">
+        <!--header -->
+        <div class="row">
+            <div class="col-md-3 col-sm-3">
+                <a href="#/"><img src="images/logo.png" class="img-responsive img-rounded " width="50%" id="logo"></a>
+            </div>
+            <div class="col-md-9 col-sm-12 ">
+                <ul class="list-inline pull-right m2 trbg">
+                    <li>
+                        <a href="#/" class=" btn-twitter ">
+                            <span class="fa fa-twitter fa-2x white"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/" class=" btn-twitter">
+                            <span class="fa fa-facebook fa-2x white"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/" class=" btn-twitter">
+                            <span class="fa fa-instagram fa-2x white"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/" class=" btn-twitter">
+                            <span class="fa fa-pinterest fa-2x white"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/" class=" btn-twitter">
+                            <span class="fa fa-youtube fa-2x white"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--Cart -->
+        <div class="row m2">
+            <div class="col-md-3 col-sm-12 invis">
+                <div class="row " id="login">
+                    <a href="#/">
+                        <div class="col-md-6 col-sm-6">
+                            <h4>Log In</h4></div>
+                    </a>
+                    <a href="#/">
+                        <div class="col-md-6 col-sm-6">
+                            <h4>Wish List</h4></div>
+                    </a>
+                </div>
+                <div class="row" id="items">
+                    <div class="col-md-3 col-sm-4
+glyphicon glyphicon-shopping-cart" id="glyphedit2"></div>
+                    <div class="col-md-6 col-sm-4">
+                        <h4>0$</h4></div>
+                    <div class="col-md-3 col-sm-4 glyphicon glyphicon-remove" id="glyphedit">
+                        <h5>edit</h5></div>
+                </div>
+                <div class="row" id="checkout">
+                    <a href="#/">
+                        <div class="col-md-6 col-sm-6">
+                            <h4>View Cart</h4></div>
+                    </a>
+                    <a href="#/">
+                        <div class="col-md-6 col-sm-4">
+                            <h4>Checkout</h4></div>
+                    </a>
+                </div>
+                <div class="row" id="search">
+                    <div class="col-md-11 col-sm-10 noPadding">
+                        <input type="text" class="form-control" placeholder="search">
+                    </div>
+                    <div class="col-md-1 col-sm-2 noPadding">
+                        <button type="button" class="btn btn-default btn-md  glyphicon glyphicon-search " id="searchicon"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Banner -->
+        <div class="row">
+            <div class="col-md-3 noPadding">
+                <div id="menu">
+                    <h4>Menu</h4></div>
+                <section class="categories">
+                    <ul class="nav">
+                        <li>
+                            <a href="#/">Home</a> </li>
+                        <li> <a href="#/contacts">Contacts</a> </li>
+                    </ul>
+                </section>
+                <div id="menu">
+                    <h4>Category</h4></div>
+                <section ng-init="tab = 1" class="categories">
+                    <ul class="nav">
+                        <li ng-class="{active:tab === 1}">
+                            <a href ng-click="tab = 1"> Windsurfing</a> </li>
+                        <li ng-class="{active:tab === 2}"> <a href ng-click="tab = 2">Kitesurf</a> </li>
+                        <li ng-class="{active:tab === 3}"> <a href ng-click="tab = 3">Accesories</a> </li>
+                    </ul>
+                </section>
+                <div id="banner2">
+                    <h1>NOW IS OPEN!</h1>
+                </div>
+                <div ng-controller="ProductsController">
+                    <h3>Tags</h3>
+                    <div class="tags col-md-4" ng-repeat="product in products">
+                        <a href="#index">
+                            <h4>{{product.tags}}</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-12" id="banner4">
+                    <h2>Article Experts</h2>
+                    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsas inanes quot tractatas euripidis, persequeretur vide consentinis quarum nivem sunt ferre mundi, minorem persecuti sermo cohaerescant vix universas conducunt acutus virtute. </br> Iudicante disputatum perdiscere maximam. Dolemus aut, oportere videtis inopem.</h4>
+                    <a href="#more"> View all -></a>
+                </div>
+            </div>
+
+            <div class="col-md-8 " id="productpl">
+            <div class="col-md-6 p3">
+                <form data-toggle="validator" role="form">
+                    <div class="form-group">
+                        <label for="inputName" class="control-label">FULL NAME*</label>
+                        <input type="text" class="form-control" id="inputName" placeholder="e.g robert smith" required>
+                    </div>
+               
+                    <div class="form-group">
+                        <label for="inputEmail" class="control-label">EMAIL*</label>
+                        <input type="email" class="form-control" id="inputEmail" placeholder="e.g name@name.com" data-error="Email address is invalid" required>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="inputCompany" class="control-label">COMPANY</label>
+                        <input type="text" class="form-control" id="inputCompany" placeholder="e.g your company (optional)" data-error="Company format invalid">
+                        <div class="help-block with-errors"></div>
+                    </div>
+              
+                    <div class="form-group">
+                        <label for="inputSubject" class="control-label">SUBJECT*</label>
+                        <input type="text" class="form-control" id="inputEmail" placeholder="e.g info" data-error="Invalid format for subject" required>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="inputMessage" class="control-label">MESSAGE</label>
+                        <textarea class="form-control" id="inputMessage" placeholder="" pattern="^[_A-z0-9]{1,}$" maxlength="100" rows="5" data-error="Message format invalid"></textarea>
+                        <div class="help-block with-errors"></div>
+                    </div>
+               
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary cntr2">Submit</button>
+                    </div>
+                </form>
+                </div>
+                <div class="col-md-6"><h3>Address</h3>
+                <p><span><h2 class="glyphicon glyphicon-map-marker m3"></h2></span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Verbis audiam malarum inprobitas audeam laudari aperta, declarant coniuncta gerendarum plus profectus deinde consuetudine tollit isti.</p>
+                <h3><span class="
+glyphicon glyphicon-earphone m3"></span>1-900-324-9876</h3>
+                <h3><span class="glyphicon glyphicon-envelope m3"></span>info@surfhouse.com</h3>
+                <p>If you have questions about your order or need any general information oru customer service team will be happy to assist you.</p>
+                </div>
+        </div>
+        <!--Banner2 -->
+    </div>
+</div>
+<!--Products -->
+<div class="row ">
+</div>
+<!--Slider -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 facebook socBig">
+            <a href="#/" class=" btn-twitter ">
+                <span class="fa fa-facebook fa-4x socAlign"></span>
+            </a>
+        </div>
+        <div class="col-md-4 twitter socBig">
+            <a href="#/" class=" btn-twitter ">
+                <span class="fa fa-twitter fa-4x socAlign"></span>
+            </a>
+        </div>
+        <div class="col-md-4 pinterest socBig">
+            <a href="#/" class=" btn-twitter ">
+                <span class="fa fa-pinterest fa-4x socAlign"></span>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="aboutfo">
+                    <div class="col-md-4 categoryfo">
+                        <h4>Category</h4>
+                        <ul>
+                            <li><a href="#/">link</a></li>
+                            <li><a href="#/">link</a></li>
+                            <li><a href="#/">link</a></li>
+                            <li><a href="#/">link</a></li>
+                            <li><a href="#/">link</a></li>
+                            <li><a href="#/">link</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 categoryfo">
+                        <h4>Our Account</h4>
+                        <ul>
+                            <li><a href="#/">link</a></li>
+                            <li><a href="#/">link</a></li>
+                            <li><a href="#/">link</a></li>
+                            <li><a href="#/">link</a></li>
+                            <li><a href="#/">link</a></li>
+                            <li><a href="#/">link</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 categoryfo">
+                        <h4>Our Support</h4>
+                        <ul>
+                            <li><a href="#/">link</a></li>
+                            <li><a href="#/">link</a></li>
+                            <li><a href="#/">link</a></li>
+                            <li><a href="#/">link</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h4>Newsletter</h4></div>
+            <div class="col-md-3">
+                <h4>About Us</h4> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Succumbere eorumque scribimus quidque. Angore sumitur inquam manu provincias magnopere eriguntur soliditatem respirare, imperiis declinabunt falsis amatoriis philosophiae, quodsi morte intellegimus debilitatem voluptatis fames gravis responsum soleat plura..</div>
+        </div>
+    </div>
+</div>

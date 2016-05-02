@@ -1,0 +1,39 @@
+{
+
+    "id": 3,
+    "name": "Harpoon Gun",
+    "price": 73.00,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Miseram adversarium, gravissimis vitam. Facilius optinere studium diligenter hic regula iudicandum mea terroribus, nominata detrimenti consequamur poterit iucunditas vis interea susciperet efficere, offendimur philosopho restat recteque quaeso coercendi exquisitaque eius vivamus, animo modum putamus, aristippus disputata, sola percipitur eorumque desiderent inferiorem reprehensiones videre partes inflammat. Ponit corrupti imperio perturbatur, stulti eloquentiam allevatio sum ennii privatione, sententia ferreum philosophiae levis proprius disputari. Medeam facta remissius quia putanda placatae audivi admonitionem, detraxit gravitate stabilique.",
+    "additional": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incurrunt delectatum abducat sanciret existimant paulo menandri optimi laus, inscientia tua virtutibus, dolore, dignissimos, loco caret, permagna dicenda ars referta verbi litterae platonem certae aequitatem. Diligi, fecisse unam magis acri dolendum inimicus existimant exorsus intellegunt, consilio causae gessisse. Captet vicinum impetus operosam eosdem utens discenda. Quanta expectamus didicerimus declinationem chrysippe patet greges per tollit epicureis, facta sentio beateque iudiciorumque. Iudicandum. Corrigere allicit apertam, graeca flagitem eventurum contineret beatus dominos. Aptior conversam gerendarum.",
+    "gender": "Male",
+    "quick": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Videtur tritani iracundiae placuit. Securi remissius sapienter inviti cohaerescent quanta dicent. Praeclara chrysippo repellere p, utrisque oratoribus probarem uberius mortis, stulti obruamus explentur maior bonae metum, quamquam, possent dicent adhuc praestabiliorem modi, putem studio hominem depravata habuit res linguam sentire efficeret scribi, excelsus aliquod eruditi cupiditate secundum, locus amputata tria copulatas libero, huc sublata apeirian alliciat civibus sensuum ornateque omnem, civibus urbane, putamus loco suscipere se addidisti non salutatus patrius iucundius meam.",
+    "availability": true,
+
+    "category": "Accessories",
+
+
+    "tags": [
+        "one",
+        "two"
+        
+    ],
+    "size": [
+        28,
+        30,
+        32
+    ],
+    "length": [
+        32,
+        33,
+        34
+    ],
+    
+    "reviews": ["Good product",
+     "I like it"],
+
+    "images": [
+        "images/clothing3.jpg",
+        "images/clothing2.jpg",
+        "images/clothing1.jpg"
+    ]
+}
